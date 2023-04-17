@@ -8,6 +8,7 @@ import {
   UilSun,
   UilSunset,
 } from "@iconscout/react-unicons";
+
 function TemperatureAndDetails() {
   return (
     <div>
@@ -21,7 +22,7 @@ function TemperatureAndDetails() {
           className="w-20"
         />
         <p className="text-5xl">34°</p>
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-col space-y-2 items-start">
           <div className="flex font-light text-sm items-center justify-center">
             <UilTemperature size={18} className="mr-1" />
             <p>Real fell:</p>
