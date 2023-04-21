@@ -19,13 +19,15 @@ The Weather App is a web-based application created using `create-react-app` that
 
 <p align="center">
   <img align="center" src="https://ik.imagekit.io/415qe0hcb/cold-image.png?updatedAt=1681972514818" width="500px"/>
-  **The background turns blue when the temperature is less than or equal to 32° celsius.**
 </p>
+
+- **The background turns blue when the temperature is less than or equal to 32° celsius.**
 
 <p align="center">
   <img src="https://ik.imagekit.io/415qe0hcb/hot-image.png?updatedAt=1681972537017" width="500px"/>
-  **The background turns blue when the temperature is less than or equal to 32° celsius.**
 </p>
+
+- **The background turns orange when the temperature is greater than 32° celsius.**
 
 ## Usage
 
@@ -35,10 +37,15 @@ The app provides 5-hours hourly forecasts and 5-day daily forecasts, as well as 
 
 A unique feature of the app is that the background color changes based on temperature, blue for temperatures less than or equal to 32 degrees Celsius and orange for temperatures above 32 degrees Celsius.
 
+## Checkout the App
+
+https://weather-app-948b8f.netlify.app/
+
 ## Getting Started
 
 <h3>Prerequisites</h3>
 Before running the Weather App, make sure that you have the following:
+
 - **Node.js** and **npm** installed on your system.
 
 <h3>Installation</h3>
