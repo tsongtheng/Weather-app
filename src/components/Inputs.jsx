@@ -8,11 +8,6 @@ function Inputs({ setQuery, units, setUnits }) {
     setCity(e.target.value);
   };
 
-  const handleUnitsChange = (e) => {
-    const selectedUnit = e.currentTarget.name;
-    if (units !== "") setUnits(selectedUnit);
-  };
-
   const handleSearchClick = () => {
     if (city !== "") setQuery({ q: city });
   };
@@ -26,6 +21,11 @@ function Inputs({ setQuery, units, setUnits }) {
         setQuery({ lat, lon });
       });
     }
+  };
+
+  const handleUnitsChange = (e) => {
+    const selectedUnit = e.currentTarget.name;
+    if (units !== selectedUnit) setUnits(selectedUnit);
   };
 
   return (
