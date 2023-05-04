@@ -67,19 +67,18 @@ const formatForecastWeather = (data) => {
 };
 
 const getFormattedWeatherData = async (searchParams) => {
-  const formattedCurrentWeather = await getWeatherData(
-    "weather",
-    searchParams
-  ).then(formatCurrentWeatherData);
+  const currentWeatherData = await getWeatherData("weather", searchParams);
+  const formattedCurrentWeather = formatCurrentWeatherData(currentWeatherData);
 
   const { lat, lon } = formattedCurrentWeather;
 
-  const formattedForecastWeather = await getWeatherData("onecall", {
+  const forecastWeatherDate = await getWeatherData("onecall", {
     lat,
     lon,
     exclude: "current, minutely,alerts",
     units: searchParams.units,
-  }).then(formatForecastWeather);
+  });
+  const formattedForecastWeather = formatForecastWeather(forecastWeatherDate);
 
   return { ...formattedCurrentWeather, ...formattedForecastWeather };
 };
