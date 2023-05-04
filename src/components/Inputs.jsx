@@ -12,6 +12,10 @@ function Inputs({ setQuery, units, setUnits }) {
     if (city !== "") setQuery({ q: city });
   };
 
+  const handleKeyDown = (e) => {
+    if (city !== "" && e.key === "Enter") setQuery({ q: city });
+  };
+
   const handleLocationClick = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
@@ -34,6 +38,7 @@ function Inputs({ setQuery, units, setUnits }) {
         <input
           value={city}
           onChange={handleInputChange}
+          onKeyDown={handleKeyDown}
           type="text"
           placeholder="Search for city...."
           className="text-xl font-light p-2 w-full shadow-xl focus:outline-none capitalize placeholder:lowercase"
