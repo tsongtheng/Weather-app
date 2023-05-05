@@ -13,7 +13,7 @@ function Inputs({ setQuery, units, setUnits }) {
   };
 
   const handleKeyDown = (e) => {
-    if (city !== "" && e.key === "Enter") setQuery({ q: city });
+    if (city && e.key === "Enter") setQuery({ q: city });
   };
 
   const handleLocationClick = () => {
