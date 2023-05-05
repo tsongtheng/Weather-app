@@ -24,7 +24,9 @@ function TemperatureAndDetails({
     feels_like,
     timezone,
   },
+  units,
 }) {
+  const tempUnit = units === "metric" ? "C" : "F";
   return (
     <div>
       <div className="flex item-center justify-center py-6 text-xl text-cyan-300">
@@ -32,12 +34,12 @@ function TemperatureAndDetails({
       </div>
       <div className="flex flex-row items-center justify-between text-white py-3">
         <img src={iconUrlFromCode(icon)} alt="" className="w-20" />
-        <p className="text-5xl">{`${temp.toFixed()}°`}</p>
+        <p className="text-5xl">{`${temp.toFixed()}° ${tempUnit}`}</p>
         <div className="flex flex-col space-y-2 items-start">
           <div className="flex font-light text-sm items-center justify-center">
             <UilTemperature size={18} className="mr-1" />
             <p>Real feel:</p>
-            <span className="font-medium ml-1">{`${feels_like.toFixed()}°`}</span>
+            <span className="font-medium ml-1">{`${feels_like.toFixed()}° ${tempUnit}`}</span>
           </div>
           <div className="flex font-light text-sm items-center justify-center">
             <UilTear size={18} className="mr-1" />
